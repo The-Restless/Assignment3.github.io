@@ -1,0 +1,135 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.toppage {
+    background-image: url("images/city.png");
+  
+
+    min-height: 100%;
+    width: auto;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+
+  }
+
+  .box{
+    width: 300px;
+    height: 110px;
+    margin: 20px;
+    border-radius: 20px;
+    border: solid 5px orange;
+    align-self: flex-end;
+    background-color:rgba(255,136,0, .5);
+    text-align: center;
+
+  }
+
+.text {
+	font-size: 20px;
+	color: white;
+}
+
+  button{
+    background:black;
+    color: orange ;
+    border:2px solid;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 20px;
+   	
+    
+   
+} 
+
+button:hover{
+    border-color: red;
+    color: red;
+    box-shadow: 0 5px 5px 1px red;
+    transform:translateY(-0.25em);
+    cursor: pointer;
+}
+
+.clock{
+	height: 100%;   
+	background
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+.clockbase{
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    margin-top: 125px;
+   
+
+    
+}
+
+
+.hour{
+    height: 65px;
+    position: absolute;
+    z-index: 1;
+    display: block;
+   
+
+    margin-top: 242px;
+    transform-origin: 0% 50%;
+    transform: rotate(-90deg);
+	margin-left: 65px;
+    animation: rotate 10s infinite linear;
+}
+
+.minute{
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    display: block;
+
+
+    margin-top: 248px;
+    transform-origin: 0% 60%;
+	margin-left: 50px;
+
+    animation: rotate30 10s infinite linear;
+   
+
+}
+
+
+  @media (max-width: 1000px) {
+    .toppage {
+        justify-content: center;
+    }
+
+    .toppage .box {
+        align-self: center;
+    }
+
+}
+
+@keyframes rotate {
+    100% {
+      transform: rotateZ(270deg);
+    }
+  }
+
+  @keyframes rotate30 {
+    100% {
+      transform: rotateZ(30deg);
+    }
+  }
